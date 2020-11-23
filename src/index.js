@@ -9,3 +9,17 @@ const map = new mapboxgl.Map({
   zoom: 12, // starting zoom
   style: "mapbox://styles/mapbox/streets-v10" // mapbox has lots of different map styles available.
 });
+
+const markerDomElNYC = document.createElement("div"); // Create a new, detached DIV
+markerDomElNYC.style.width = "32px";
+markerDomElNYC.style.height = "39px";
+markerDomElNYC.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+
+new mapboxgl.Marker(markerDomElNYC).setLngLat([-74.009, 40.705]).addTo(map); // [-87.641, 41.895] for Chicago
+
+const markerDomElChicago = document.createElement("div"); // Create a new, detached DIV
+markerDomElChicago.style.width = "32px";
+markerDomElChicago.style.height = "39px";
+markerDomElChicago.style.backgroundImage = "url(http://i.imgur.com/WbMOfMl.png)";
+
+new mapboxgl.Marker(markerDomElChicago).setLngLat([-87.641, 41.895]).addTo(map); // [-87.641, 41.895] for Chicago
